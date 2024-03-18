@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FootBall Boot</title>
+    <link rel="icon" href="img-football-boot/brand_adidas_icon_159015.ico">
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #eb0000;
+            font-family: system-ui;
+            height: 100vh;
+            overflow: hidden;
+        }
+        header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 50px;
+        }
+        header ul{
+            display: flex;
+            gap: 50px;
+        }
+        header ul li{
+            list-style: none;
+        }
+        header a{
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            font-size: 20px;
+        }
+        header a:hover{
+            border-bottom: solid 2px white;
+        }
+        main{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 70%;
+        }
+        main .content {
+            width: 410px;
+        }
+        main .content h1{
+            font-size: 42px;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin: 0;
+            color: white;
+        }
+        main .content h3{
+            font-size: 32px;
+            font-weight: 600;
+            margin: 0;
+            color: white;
+            text-align: center;
+            text-transform: capitalize;
+        }
+        main .content p{
+            font-size: 18px;
+            text-align: center;
+            color: white;
+            line-height: 25px;
+            letter-spacing: 1px;
+        }
+        main .content button{
+            margin-left: 120px;
+            margin-top: 30px;
+            padding: 10px 30px;
+            border-radius: 15px;
+            border: none;
+            font-family: system-ui;
+            font-weight: 500;
+            font-size: larger;
+            transition: all ease 300ms;
+        }
+        main .content button:hover{
+            scale: 1.1;
+            background-color: #e0e0e0;
+        }
+        main #picture{
+            width: 400px;
+            rotate: 20deg;
+            filter : drop-shadow(0px 15px 10px #3f3f3fbd);
+        }
+        section{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            height: 16%;
+        }
+        section img{
+            width: 100px;
+            transition: all 200ms linear;
+        }
+        section img:hover{
+            scale: 1.1;
+            translate: 0px -5px;
+            cursor: pointer;
+        }
+        #fbootGreen, #fbootBlack{
+            transform: rotateY(180deg);
+        }
+        @media screen and (max-width : 767px){
+            header ul{
+                display: none;
+            }
+            header img{
+                margin: auto;
+            }
+
+            main #picture{
+                width: 240px;
+            }
+            section img{
+                width: 60px;
+            }
+            main .content h1{
+                font-size: 30px;
+                text-align: center;
+            }
+            main{
+                display: flex;
+                flex-direction: column;
+            }
+            main button{
+                display: none;
+            }
+        }
+        @media screen and (min-width: 768px) and (max-width: 1023px){
+            header ul{
+                gap: 25px;
+            }
+            main #picture{
+                width: 300px;
+            }
+            section img{
+                width: 80px;
+            }
+            main .content h1{
+                font-size: 35px;
+                text-align: center;
+
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="img-football-boot/brand_adidas_icon_159015.ico" alt="adidas logo">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Product</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+    <main>
+        <div class="content">
+            <h1>Adidas Collection</h1>
+            <h3>Football boots</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis ipsum numquam ducimus, veniam fuga voluptates.</p>
+            <button>Buy Now</button>
+        </div>
+        <div class="fboot">
+            <img id="picture" src="img-football-boot/adidas-football-boot-red.png" alt="Football Boot">
+        </div>
+    </main>
+    <section>
+        <img id="fbootRed" src="img-football-boot/adidas-football-boot-red.png" alt="">
+        <img id="fbootGreen" src="img-football-boot/adidas-football-boot-green.png" alt="">
+        <img id="fbootGray" src="img-football-boot/adidas-football-boot-gray.png" alt="">
+        <img id="fbootBlack" src="img-football-boot/adidas-football-boot-black.png" alt="">
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
